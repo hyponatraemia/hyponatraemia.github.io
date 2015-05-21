@@ -17,7 +17,7 @@ social:
   - title: twitter
     url: https://twitter.com/hyponatraemia
   - title: github
-    url: https://hyponatraemia.github.com
+    url: https://github.com/hyponatraemia
 
 # Build settings
 markdown: kramdown

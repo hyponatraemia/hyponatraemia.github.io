@@ -1,0 +1,24 @@
+# Site settings
+title: The Nottingham Neurosim course
+email: mylesdowling@nhs.net
+url: https://hyponatraemia.github.io
+description: "Webpage for the Nottingham Neurosim course"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+
+# Footer settings
+footer: Nottingham Neurosim
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/hyponatraemia
+  - title: github
+    url: https://hyponatraemia.github.com
+
+# Build settings
+markdown: kramdown
+permalink: pretty

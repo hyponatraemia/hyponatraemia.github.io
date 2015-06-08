@@ -41,16 +41,30 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: new google.maps.LatLng(52.945475, -1.186186), // QMC, Nottingham
 
         // Disables the default Google Maps UI components
-        disableDefaultUI: true,
+        disableDefaultUI: false,
         scrollwheel: false,
-        draggable: false,
+        draggable: true,
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
-        styles: [{
+        
+        // copied style as per: https://snazzymaps.com/style/15/subtle-grayscale
+        // with local mods as per DS
+        styles: [
+        {"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},
+        {"featureType":"poi","stylers":[{"saturation":-100},{"lightness":-0},{"visibility":"simplified"}]},
+        {"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},
+        {"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},
+        {"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},
+        {"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},
+        {"featureType":"administrative.province","stylers":[{"visibility":"off"}]},
+        {"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},
+        {"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+
+        /*[{
             "featureType": "water",
             "elementType": "geometry",
             "stylers": [{
@@ -157,8 +171,8 @@ function init() {
             }, {
                 "weight": 1.2
             }]
-        }]
-    };
+        }] */
+    }; 
 
     // Get the HTML DOM element that will contain your map 
     // We are using a div with id="map" seen below in the <body>
@@ -168,8 +182,8 @@ function init() {
     var map = new google.maps.Map(mapElement, mapOptions);
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
+    var image = 'img/map-marker-ds.png';
+    var myLatLng = new google.maps.LatLng(52.945475, -1.186186);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,

@@ -16,3 +16,10 @@ Some details for the new neurosim page
 - aspect ratio w/h: 1.33. Originally 1500px by 1125px load quickly and have nice amount of detail
 - note to self: Imagemagick ``identify`` and ``convert`` are our friends
 
+
+## Notes for editing
+
+- check the folder ``_includes`` for files with text. 
+- ``about.html`` for details on the course
+- ``contact.html`` for contact details, but NB e-mail address etc. are in ``_config.yml`` (the data file)
+- if ``.nojekyll`` is present in folder then github pages will not be translated.

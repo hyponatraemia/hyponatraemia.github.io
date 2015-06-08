@@ -41,7 +41,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(52.945475, -1.186186), // QMC, Nottingham
+        center: new google.maps.LatLng(52.944175, -1.186183), // QMC, Nottingham
 
         // Disables the default Google Maps UI components
         disableDefaultUI: false,
@@ -53,6 +53,8 @@ function init() {
         
         // copied style as per: https://snazzymaps.com/style/15/subtle-grayscale
         // with local mods as per DS
+        // qmc lat long:   52.944175, -1.186183
+
         styles: [
         {"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},
         {"featureType":"poi","stylers":[{"saturation":-100},{"lightness":-0},{"visibility":"simplified"}]},
@@ -183,7 +185,7 @@ function init() {
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker-ds.png';
-    var myLatLng = new google.maps.LatLng(52.945475, -1.186186);
+    var myLatLng = new google.maps.LatLng(52.944175, -1.186183);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,
